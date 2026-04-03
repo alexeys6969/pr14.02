@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verification"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_back"
+            android:onClick="OnBack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inclined"
+            android:gravity="center"
+            android:text="OTP Проверка"
+            android:textColor="@color/black"
+            android:textSize="14pt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inclined"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Пожалуйста, проверьте свою электронную почту, чтобы увидеть код подтверждения"
+            android:textColor="#707B81"
+            android:textSize="8pt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inclined"
+            android:layout_marginTop="16dp"
+            android:text="OTP код:"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number1"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number2"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number3"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number4"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number5"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/number6"
+                    style="@style/EditText"
+                    android:layout_width="46dp"
+                    android:layout_height="99dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:inputType="numberPassword"
+                    android:layout_weight="0.16" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inclined"
+                android:layout_marginTop="8dp"
+                android:text="Отправить заново"
+                android:textColor="#767B81"
+                android:textSize="6pt" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="00:30"
+                android:textColor="#707881"
+                android:textSize="6pt"
+                android:gravity="right" />
+
+            <TextView
+                android:id="@+id/send_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Отправить"
+                android:textStyle="bold"
+                android:textColor="#48B2E7"
+                android:textSize="6pt"
+                android:onClick="SendCode"
+                android:gravity="right"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_email"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="xyz@gmail.com"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
