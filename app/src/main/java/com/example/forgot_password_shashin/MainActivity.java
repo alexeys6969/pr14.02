@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void returner(String Response) {
             AlertDialog.Builder AlertDialogBuilder = new AlertDialog.Builder(Context);
-            ConstraintLayout View = (ConstraintLayout)getLayoutInflater().inflate(R.layout.check_email, null;
+            ConstraintLayout View = (ConstraintLayout)getLayoutInflater().inflate(R.layout.check_email, null);
             AlertDialogBuilder.setView(View);
             AlertDialogBuilder.setOnCancelListener(AlertDialogCancelListener);
             AlertDialog Dialog = AlertDialogBuilder.create();
